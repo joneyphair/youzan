@@ -5,8 +5,10 @@
   "devDependencies": {
     "@nodemailer/pro": "^1.0.0",
     "child_process": "^1.0.2",
+    "consolidate": "^0.14.5",
     "dateformat": "^2.0.0",
     "express": "^4.14.0",
+    "express-dustjs": "^1.1.1",
     "express-json": "^1.0.0",
     "express-useragent": "^1.0.6",
     "isomorphic-fetch": "^2.2.1",
