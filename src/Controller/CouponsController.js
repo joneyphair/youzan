@@ -53,6 +53,23 @@ class CouponsController {
 	}
 
 
+	logs(req,res){
+
+			res.setHeader('Content-Type', 'application/json');
+
+			var params = {
+				method:'kdt.ump.coupon.consume.verifylogs.get',
+				type:'promocard'
+			}
+
+			YouZan.request(params).then(function(response){
+				res.json(response);
+			}).catch(function(err){
+				res.json(err);
+			});	
+	}
+
+
 	index(req,res){
 
 	}

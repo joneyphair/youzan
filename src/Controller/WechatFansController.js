@@ -55,7 +55,7 @@ class WechatFansController {
 
 			var params = {
 				method:'kdt.users.weixin.follower.get',
-				weixin_openid:'oRNSRv2XvOHbO9et8R9WpiRCL4ts'
+				user_id:'72018723'
 			}
 
 			YouZan.request(params).then(function(response){

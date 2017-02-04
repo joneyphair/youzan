@@ -6,23 +6,25 @@ class Spider{
 
 	request(path){
 
+
 		var promise =  new Promise((resolve, reject) => {
 
-			const phantom = child_process.spawn('phantomjs', ['../../Spider/index.js', path]);
+			const phantom = child_process.spawn('phantomjs', ['./src/Spider/index.js', 'https://koudaitong.com/v2/dashboard/index']);
 
 			phantom.stdout.setEncoding('utf8');
 
 	
 			phantom.stdout.on('data', function(data){
-				console.log(data)
+				console.log('4435454543534',data)
    				resolve(data);
 			});
 
 			phantom.on('exit', function(code){
-				reject({});
+				console.log('--------')
+				reject({'err':1});
 			});
 
-	});
+	   });
 
 		return promise;
 	

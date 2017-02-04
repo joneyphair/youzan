@@ -13,13 +13,14 @@ const {
 
 module.exports = function(app){
 
-  app.get('/',HomeController.index);
+
+
+app.get('/',HomeController.index);
 
 
 
 //spider
 app.get('/spider',SpiderController.index);
-
 
 
 //shop
@@ -33,6 +34,7 @@ app.get('/shop/trade',TradeController.items);
 //CouponsController
 app.get('/shop/coupons/unfinished',CouponsController.unfinished);
 app.get('/shop/coupons/take',CouponsController.take);
+app.get('/shop/coupons/logs',CouponsController.logs);
 
 //goods
 app.get('/shop/goods',GoodsController.items);

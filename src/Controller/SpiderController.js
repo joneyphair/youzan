@@ -19,12 +19,12 @@ class SpiderController {
 	index(req,res){
 
 
-
 		Spider.request('main').then(function(response){
-				res.json(response);
+			res.json(response);
 		}).catch(function(err){
-				res.json(err);
+			res.json(err);
 		});
+
 
 		
 

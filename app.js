@@ -6,7 +6,7 @@ const useragent = require('express-useragent');
 const app = express();
 
 
- app.use(useragent.express());
+app.use(useragent.express());
 app.use(bodyParser.json());
 app.use(json());
 app.use(bodyParser.urlencoded({
@@ -14,5 +14,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 const Router = require('./src/router')(app);
+const socket = require('./src/socket')();
 
 Router.listen(8010);
